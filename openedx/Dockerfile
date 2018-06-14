@@ -22,8 +22,8 @@ RUN mkdir /openedx /openedx/data /openedx/edx-platform
 WORKDIR /openedx/edx-platform
 
 ## Checkout edx-platform code
-ARG EDX_PLATFORM_REPOSITORY=https://github.com/edx/edx-platform.git
-ARG EDX_PLATFORM_VERSION=open-release/hawthorn.beta1
+ARG EDX_PLATFORM_REPOSITORY=https://github.com/Microsoft/edx-platform.git
+ARG EDX_PLATFORM_VERSION=oxa/dev.haw
 RUN git clone $EDX_PLATFORM_REPOSITORY --branch $EDX_PLATFORM_VERSION --depth 1 .
 
 # Install python requirements (clone source repos in a separate dir, otherwise
